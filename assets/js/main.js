@@ -9,5 +9,11 @@ function choixpeau() {
 }
 
 function injectChoix() {
-    document.getElementById("affichage").innerText = choixpeau();
+    let chapeau = document.getElementById("chapeau");
+    chapeau.classList.add("rotate-center");
+    
+    setTimeout(function() {
+        //your code to be executed after 1 second
+        document.getElementById("resultat").innerText = choixpeau();
+    }, 1000);
 }
