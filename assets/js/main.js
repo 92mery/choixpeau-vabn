@@ -4,8 +4,10 @@ function randomElementIn(array) {
    return Math.floor(Math.random() * array.length);
 }
 
-let ecoleChoisie = randomElementIn(ecoles);
+function choixpeau() {
+  return ecoles[randomElementIn(ecoles)];
+}
 
 function injectChoix() {
-    document.getElementById("").innerText = ecoleChoisie;
+    document.getElementById("affichage").innerText = choixpeau();
 }
