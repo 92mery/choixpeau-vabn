@@ -10,10 +10,15 @@ function choixpeau() {
 
 function injectChoix() {
     let chapeau = document.getElementById("chapeau");
-    chapeau.classList.add("rotate-center");
-    
+    chapeau.classList.remove("rotate-center");
+    document.getElementById("resultat").innerText = "";
+
     setTimeout(function() {
-        //your code to be executed after 1 second
-        document.getElementById("resultat").innerText = choixpeau();
-    }, 1000);
+      chapeau.classList.add("rotate-center");
+    }, 500);
+
+    setTimeout(function() {
+      //your code to be executed after 1 second
+      document.getElementById("resultat").innerText = choixpeau();
+  }, 1500);
 }
