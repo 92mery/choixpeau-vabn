@@ -10,15 +10,27 @@ function choixpeau() {
 
 function injectChoix() {
     let chapeau = document.getElementById("chapeau");
-    chapeau.classList.remove("rotate-center");
-    document.getElementById("resultat").innerText = "";
+    let resultat = document.getElementById("resultat");
 
+    // réinitialiser la rotation du chapeau + transparence résultat
+    chapeau.classList.remove("rotate-center");
+    resultat.classList.add("transparent");
+
+  //  effacer le résultat précédent si besoin
+    setTimeout(function() {
+      document.getElementById("resultat").innerText = "";
+    }, 500);
+
+    // appliquer class animation rotation au chapeau
     setTimeout(function() {
       chapeau.classList.add("rotate-center");
     }, 500);
 
+    // rendre résultat visible et appeler le résultat random
     setTimeout(function() {
-      //your code to be executed after 1 second
+      resultat.classList.remove("transparent");
+      resultat.classList.add("visible");
+
       document.getElementById("resultat").innerText = choixpeau();
   }, 1500);
 }
