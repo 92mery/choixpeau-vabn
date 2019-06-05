@@ -4,6 +4,7 @@ function randomElementIn(array) {
    return Math.floor(Math.random() * array.length);
 }
 
+// transforme l'index du tableau en sa valeur
 function choixpeau() {
   return ecoles[randomElementIn(ecoles)];
 }
